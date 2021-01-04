@@ -1,54 +1,32 @@
 <template>
-  <section class="container">
-    <h2>{{ userName }}</h2>
-    <h3>{{ age }}</h3>
-  </section>
+  <the-header></the-header>
+  <router-view></router-view>
 </template>
 
 <script>
-import {ref} from 'vue';
+import TheHeader from "@/components/layout/TheHeader";
 
 export default {
-  setup() {
-    const uName = ref('Maximilian');
-    const uAge = ref(31);
-
-    setTimeout(function () {
-      uName.value = 'Max';
-    }, 2000);
-
-    return {
-      userName: uName,
-      age: uAge
-    }
+  name: 'App',
+  components: {
+    TheHeader,
   }
-  // data() {
-  //   return {
-  //     userName: 'Maximilian',
-  //   };
-  // },
-};
+
+}
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
-}
-
-.container {
-  margin: 3rem auto;
-  max-width: 30rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 1rem;
-  text-align: center;
 }
 </style>
