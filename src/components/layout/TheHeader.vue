@@ -6,6 +6,7 @@
         <li><router-link to="/">StartPage</router-link></li>
         <li><router-link to="/practice-assignement-one">First Assignement</router-link></li>
         <li><router-link to="/practice-assignement-two">Second Assignement</router-link></li>
+        <li><router-link to="/composition-demo">Composition Demo</router-link></li>
       </ul>
     </nav>
   </header>
