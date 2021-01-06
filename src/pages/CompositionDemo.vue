@@ -9,9 +9,10 @@
 
 <script>
 import USER_DATA from '@/dummy-data';
-
 import UserList from "@/components/users/UserList";
 import ProjectsList from "@/components/projects/ProjectsList";
+
+import { ref } from 'vue';
 
 export default {
   name: "Composition-Demo",
@@ -19,17 +20,33 @@ export default {
     UserList,
     ProjectsList,
   },
-  data() {
+
+  setup() {
+    const selectedUser = ref(null);
+    const activeUsers = USER_DATA;
+
+    function selectUser(uid) {
+      selectedUser.value = activeUsers.find((usr) => usr.id === uid);
+    }
+
     return {
-      selectedUser: null,
-      activeUsers: USER_DATA,
+      selectedUser,
+      activeUsers,
+      selectUser
     };
   },
-  methods: {
-    selectUser(uid) {
-      this.selectedUser = this.activeUsers.find((usr) => usr.id === uid);
-    },
-  },
+
+  // data() {
+  //   return {
+  //     selectedUser: null,
+  //     activeUsers: USER_DATA,
+  //   };
+  // },
+  // methods: {
+  //   selectUser(uid) {
+  //     this.selectedUser = this.activeUsers.find((usr) => usr.id === uid);
+  //   },
+  // },
 }
 </script>
 
