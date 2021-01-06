@@ -4,7 +4,8 @@
       <h1><router-link to="/">Reactive Composition</router-link></h1>
       <ul>
         <li><router-link to="/">StartPage</router-link></li>
-        <li><router-link to="/practice-assignement">Assignement</router-link></li>
+        <li><router-link to="/practice-assignement-one">First Assignement</router-link></li>
+        <li><router-link to="/practice-assignement-two">Second Assignement</router-link></li>
       </ul>
     </nav>
   </header>
