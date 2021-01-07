@@ -1,16 +1,16 @@
 <template>
-  <the-header></the-header>
+  <routing-header></routing-header>
+  <h3>Routing Assignment</h3>
   <router-view></router-view>
 </template>
 
 <script>
+import RoutingHeader from '@/components/layout/RoutingHeader';
 import { ref, provide } from 'vue';
-
-import TheHeader from './components/TheHeader.vue';
 
 export default {
   components: {
-    TheHeader,
+    RoutingHeader
   },
   setup() {
     const products = ref([
@@ -30,7 +30,7 @@ export default {
 
     function addProduct(productData) {
       const newProduct = {
-        id: new Date().toISOString(),
+        id: new Date().getTime().toString(),
         title: productData.title,
         description: productData.description,
         price: productData.price,

@@ -4,6 +4,12 @@ import FirstLection from "@/pages/FirstLection";
 import PracticeAssignmentOne from "@/pages/PracticeAssignmentOne";
 import PracticeAssignmentTwo from "@/pages/PracticeAssignmentTwo";
 import CompositionDemo from "@/pages/CompositionDemo";
+import RoutingAssignment from "@/pages/RoutingAssignment";
+import AllProducts from "@/components/projects/routing/AllProducts";
+import AddProduct from "@/components/projects/routing/AddProduct";
+import ProductDetails from "@/components/projects/routing/ProductDetails";
+import VuexComposition from "@/pages/VuexComposition";
+import ReusabilityConcepts from "@/pages/ReusabilityConcepts";
 
 
 const router = createRouter({
@@ -11,9 +17,18 @@ const router = createRouter({
     routes: [
         { path: '/', component: FirstLection },
 
-        { path: '/practice-assignement-one', component: PracticeAssignmentOne },
-        { path: '/practice-assignement-two', component: PracticeAssignmentTwo },
+        { path: '/practice-assignment-one', component: PracticeAssignmentOne },
+        { path: '/practice-assignment-two', component: PracticeAssignmentTwo },
         { path: '/composition-demo', component: CompositionDemo },
+        { path: '/routing-assignment', component: RoutingAssignment, children: [
+                { path: 'products', component: AllProducts },
+                { path: 'products/:pid', component: ProductDetails, props: true },
+                { path: 'add', component: AddProduct }
+            ] },
+        { path: '/routing-assignment/products', component: AllProducts },
+        { path: '/vuex-composition', component: VuexComposition },
+
+        { path: '/reusability-concepts', component: ReusabilityConcepts }
     ]
 })
 

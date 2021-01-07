@@ -3,10 +3,13 @@
     <nav>
       <h1><router-link to="/">Reactive Composition</router-link></h1>
       <ul>
-        <li><router-link to="/">StartPage</router-link></li>
-        <li><router-link to="/practice-assignement-one">First Assignement</router-link></li>
-        <li><router-link to="/practice-assignement-two">Second Assignement</router-link></li>
+<!--        <li><router-link to="/">StartPage</router-link></li>-->
+        <li><router-link to="/practice-assignment-one">First Assignment</router-link></li>
+        <li><router-link to="/practice-assignment-two">Second Assignment</router-link></li>
         <li><router-link to="/composition-demo">Composition Demo</router-link></li>
+        <li><router-link to="/routing-assignment/products">Routing Assignment</router-link></li>
+        <li><router-link to="/vuex-composition">Vuex Composition</router-link></li>
+        <li><router-link to="/reusability-concepts">Reusability Concepts</router-link></li>
       </ul>
     </nav>
   </header>

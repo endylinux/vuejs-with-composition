@@ -1,13 +1,17 @@
 <template>
   <header>
     <nav>
+<!--      <h3>The HeaderRouting</h3>-->
       <ul>
         <li>
-          <router-link to="/products">All Products</router-link>
+          <router-link to="/routing-assignment/products">All Products</router-link>
         </li>
         <li>
-          <router-link to="/products/add">Add Product</router-link>
+          <router-link to="/routing-assignment/add">Add Product</router-link>
         </li>
+<!--        <li>-->
+<!--          <router-link to="/products/add">Add Product</router-link>-->
+<!--        </li>-->
       </ul>
     </nav>
   </header>
