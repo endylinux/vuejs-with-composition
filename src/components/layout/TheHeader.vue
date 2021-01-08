@@ -10,6 +10,8 @@
         <li><router-link to="/routing-assignment/products">Routing Assignment</router-link></li>
         <li><router-link to="/vuex-composition">Vuex Composition</router-link></li>
         <li><router-link to="/reusability-concepts">Reusability Concepts</router-link></li>
+        <li><router-link to="/composables-composition-api">Composables & Composition</router-link></li>
+<!--        <li><router-link to="/search-hook">Search Hook</router-link></li>-->
       </ul>
     </nav>
   </header>

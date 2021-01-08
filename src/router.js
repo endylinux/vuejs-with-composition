@@ -10,6 +10,8 @@ import AddProduct from "@/components/projects/routing/AddProduct";
 import ProductDetails from "@/components/projects/routing/ProductDetails";
 import VuexComposition from "@/pages/VuexComposition";
 import ReusabilityConcepts from "@/pages/ReusabilityConcepts";
+import ComposablesAndCompositionApi from "@/pages/ComposablesAndCompositionApi";
+import SearchHook from "@/pages/SearchHook";
 
 
 const router = createRouter({
@@ -28,7 +30,9 @@ const router = createRouter({
         { path: '/routing-assignment/products', component: AllProducts },
         { path: '/vuex-composition', component: VuexComposition },
 
-        { path: '/reusability-concepts', component: ReusabilityConcepts }
+        { path: '/reusability-concepts', component: ReusabilityConcepts },
+        { path: '/composables-composition-api', component: ComposablesAndCompositionApi },
+        { path: '/search-hook', component: SearchHook },
     ]
 })
 
